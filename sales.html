@@ -8,6 +8,30 @@
     <body>
         <h1>Seattle's Salmon Cookies</h1>
         
+        <h2>Update Location</h2>
+        <form id="addNewLocation">
+            <fieldset>
+                <legend>Update Location Form</legend>
+                
+                <label for="locationName">Location Name: </label>
+                <input name="locationName" type="text" required size="15" />
+                
+                <label for="minCust">Minimum Customer Count: </label>
+                <input name="minCust" type="number" required size="15" />
+
+                <label for="maxCust">Maximum Customer Count: </label>
+                <input name="maxCust" type="number" required size="15" />
+
+                <label for="averageCookie">Average Cookie Count: </label>
+                <input name="averageCookie" type="number" required size="15" />
+
+                <button type="submit">Update Location</button>
+            </fieldset>
+        </form>
+
+        <button id="undoAllChanges">Clear all changes</button>
+
+        <h2>Cookie Sales by Hour and Location</h2>
         <table id = "sales"></table>
 
 

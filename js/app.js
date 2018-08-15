@@ -110,22 +110,15 @@ function renderAllLocations(){
 makeHeaderRow();
 renderAllLocations();
 
-
+//create an array to hold all the totals 
 var hoursTotal = [];
+ 
+for (var j = 0; j < hours.length; j++){
+  var total = 0;
 
-//Stretch goal. Still working on it. 
-// for (var j = 0; j < allLocations[0].numPurchased.length; j++){
-//   var total = 0;
-
-//   for (var i = 0; i < allLocations.length; i++){
-//     console.log('in the i loop ', i, allLocations[j]);
-//     total += allLocations[i].numPurchased[i];
-//   }
-//   console.log(total);
-//   hoursTotal.push(total);
-// }
-// console.log("hours total", hoursTotal);
-
-
-
-
+  for (var i = 0; i < allLocations.length; i++){
+    total += allLocations[i].numPurchased[j];
+  }
+  hoursTotal.push(total);
+}
+console.log("hours total", hoursTotal);

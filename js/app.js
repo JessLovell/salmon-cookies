@@ -38,19 +38,21 @@ new BusinessLocations('Alki', 20, 38, 2.3);
 
 //arrays of random number function and totals it
 BusinessLocations.prototype.fillRandom = function () {
-
-  //log create array of random number
-  for (var i = 0; i < hours.length; i++) {
-    while (this.numCustomer.length < hours.length && this.numPurchased.length < hours.length){
-      var randNum = getRandomNumber(this.minCustomers, this.maxCustomers);
-      this.numCustomer.push(randNum);
-      this.numPurchased.push(Math.round(this.avgCustomerCookies*randNum));
-
-      this.totalCookies += randNum;
+  if (this.totalCookies === 0){
+    var total = 0;
+    //log create array of random number
+    for (var i = 0; i < hours.length; i++) {
+      while (this.numCustomer.length < hours.length && this.numPurchased.length < hours.length){
+        var randNum = getRandomNumber(this.minCustomers, this.maxCustomers);
+        this.numCustomer.push(randNum);
+        this.numPurchased.push(Math.round(this.avgCustomerCookies*randNum));
+        total += randNum;
+      }
     }
+    this.totalCookies = Math.round(this.avgCustomerCookies*total);
   }
   //output the total cookies
-  console.log(`The ${this.locationName} location sold a total of ${this.totalCookies} today.`);
+  //console.log(`The ${this.name} location sold a total of ${this.totalCookies} today.`);
 };
 
 //create the table
@@ -144,9 +146,12 @@ function fillFooter (){
 
     for (var i = 0; i < allLocations.length; i++){
       total += allLocations[i].numPurchased[j];
-      allCookieTotal += allLocations[i].totalCookies;
     }
     hoursTotal.push(total);
+  }
+
+  for (i = 0; i < allLocations.length; i++){
+    allCookieTotal += allLocations[i].totalCookies;
   }
   console.log(`hours total ${hoursTotal}, ${allCookieTotal}` );
   return [hoursTotal, allCookieTotal];

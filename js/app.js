@@ -165,10 +165,8 @@ function handleCommentSubmit (event){
   var location = event.target.locationName.value;
   var min = parseInt(event.target.minCust.value);
   var max = parseInt(event.target.maxCust.value);
-  var avg = parseInt(event.target.averageCookie.value);
+  var avg = parseFloat(event.target.averageCookie.value);
   console.log(` ${location}, ${min}, ${max}, ${avg}`);
-
-  //test if user wants to update values for a location:
 
   new BusinessLocations(location, min, max, avg);
 

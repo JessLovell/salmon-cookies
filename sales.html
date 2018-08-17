@@ -4,10 +4,19 @@
         <title>Salmon Cookie Sales</title>
         <link href="css/reset.css" type="text/css" rel="stylesheet" />
         <link href="css/style.css" type="text/css" rel="stylesheet" />
+        <!-- link to google font below -->
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     </head>
     <body>
         <h1>Seattle's Salmon Cookies</h1>
-        
+        <nav>
+                <a href="index.html#testimonials">Testimonials</a>
+                <a href="index.html#locations">Locations</a>
+                <a href="index.html#shop">Shop</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="sales.html">Employees Only</a>
+        </nav>
         <h2>Update Location</h2>
         <form id="addNewLocation">
             <fieldset>
@@ -16,14 +25,16 @@
                 <label for="locationName">Location Name: </label>
                 <input name="locationName" type="text" required />
                 
-                <label for="minCust">Minimum Customer Count: </label>
+                <label for="minCust">Minimum Count: </label>
                 <input name="minCust" type="number" required />
 
-                <label for="maxCust">Maximum Customer Count: </label>
+                <label for="maxCust">Maximum Count: </label>
                 <input name="maxCust" type="number" required />
 
                 <label for="averageCookie">Average Cookie Count: </label>
                 <input name="averageCookie" type="text" required />
+                
+                <br />
 
                 <button type="submit">Update Location</button>
             </fieldset>

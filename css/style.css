@@ -1,16 +1,18 @@
 body {
     padding: 30px;
     /* border: 10px dotted; */
-    max-width: 700px;
+    max-width: 900px;
     margin: auto;
     background: whitesmoke;
     line-height: 2;
     text-align: center;
     font-family: 'Noto Serif', serif;
 }
+
 img {
     max-width: 700px;
     width: auto;
+    margin: 30px;
 }
 h1 {
     font-family: 'Homemade Apple', cursive;
@@ -19,4 +21,62 @@ h1 {
 h2{
     font-family: 'Homemade Apple', cursive;
     font-size: 30px;
+    margin-top: 70px;
+}
+.testimonials {
+    float: left;
+    width: 30%;
+    margin: 10px;
+}
+
+#testimonials {
+    content: ' ';
+    display: table;
+    clear: both;
+    padding: 20px;
+}
+ul {
+    display: inline-block;
+    padding: 10px;  
+}
+.location-name {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 20px;
+}
+ul:not(:last-child){
+    border-right: 3px solid;
+}
+a {
+    padding: 10px;
+}
+nav {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+}
+#family-photo {
+    width: 400px;
+}
+.small {
+    width: 20px;
+}
+#ugly-photos {
+    background: rgb(175, 175, 175);
+}
+th {
+    border-bottom: 3px solid;
+    border-top: 3px solid;
+    padding: 5px;
+    background: rgb(199, 199, 199)
+}
+td:last-child, th:last-child {
+    border-left: 3px solid;
+}
+td:first-child{
+    font-size: 10px;    
+}
+form {
+    border: 3px solid;
+}
+legend{
+    font-size: 20px;
 }

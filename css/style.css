@@ -9,6 +9,15 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
+/* HEADER */
+a {
+    padding: 10px;
+    text-decoration: none;
+}
+nav {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+}
 img {
     max-width: 700px;
     width: auto;
@@ -21,20 +30,53 @@ h1 {
 h2{
     font-family: 'Homemade Apple', cursive;
     font-size: 30px;
-    margin-top: 70px;
+    margin-top: 30px;
 }
+
+/* TESTIMONIALS  */
 .testimonials {
     float: left;
     width: 30%;
     margin: 10px;
 }
-
 #testimonials {
     content: ' ';
     display: table;
     clear: both;
-    padding: 20px;
+    padding: 10px;
 }
+
+
+/* SHOP */
+#shop ul {
+    display:inline-block;
+    
+}
+#shop img {
+    max-height: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+#shop img:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+#shop {
+    margin: 60px;
+    font-size: 20px;
+    font-weight: 300;
+}
+#shop .stock{
+    color: white;
+    background: red;
+    font-weight: bold;
+}
+#shop .stock:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+/* LOCATION */
 ul {
     display: inline-block;
     padding: 10px;  
@@ -43,40 +85,69 @@ ul {
     font-family: 'Homemade Apple', cursive;
     font-size: 20px;
 }
-ul:not(:last-child){
-    border-right: 3px solid;
+#locations {
+    padding-top: 30px;
+    padding-bottom: 60px;
 }
-a {
-    padding: 10px;
-}
-nav {
-    border-top: 3px solid;
-    border-bottom: 3px solid;
+
+/* CONTACT */
+#contact div {
+    float: left;
+    padding-top: 30px;
 }
 #family-photo {
     width: 400px;
+    margin: 0px;
+    padding: 0px 30px 20px 0px;
 }
+#contact p {
+    width: 400px;
+    float: right;
+}
+
+/* FOOTER */
 .small {
     width: 20px;
 }
-#ugly-photos {
+footer {
+    clear: both;
     background: rgb(175, 175, 175);
 }
+
+
+/* SALES PAGE  */
+form {
+    border: 3px solid;
+    font-size: 15px;
+    padding: 30px;
+}
+ 
+fieldset:not(:last-child) {
+    column-count: 2;
+}
+
 th {
     border-bottom: 3px solid;
     border-top: 3px solid;
     padding: 5px;
     background: rgb(199, 199, 199)
 }
+
 td:last-child, th:last-child {
     border-left: 3px solid;
 }
+
 td:first-child{
     font-size: 10px;    
 }
-form {
-    border: 3px solid;
+
+button {
+    border: none;
+    padding: 10px 20px;
+    background: grey;
 }
-legend{
-    font-size: 20px;
+button:hover {
+    opacity: .5;
+    cursor: pointer;
 }
+
